@@ -1,14 +1,18 @@
 from dotenv import load_dotenv
+from os import getenv
 
 class Utilities():
     load_dotenv(".env")
 
-    guildID = 852403894101082143
+    OPLOSH_TOKEN = getenv("OPLOSH_TOKEN")
+
+    guildID = 1138223581927579660 # test
+    dailyRaportID = 1363636958550692020 # test
     eventGuildID = 1222254865795907704
 
 class Acolyte:
     def __init__(self, user_id, exp=0, lvl=0, characters=None):
-        self.user_id = user_id  # Klucz główny
+        self.user_id = user_id  
         self.exp = exp
         self.lvl = lvl
         self.characters = characters if characters is not None else []
